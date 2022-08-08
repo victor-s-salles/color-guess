@@ -67,8 +67,6 @@ function answer() {
   for (let index = 0; index < options.length; index += 1) {
     options[index].addEventListener('click', (event) => {
       const color = event.target.style.backgroundColor;
-      console.log(color);
-      console.log(aux2);
       if (color == aux2) {
         respCert();
         scorePlacar();
@@ -96,5 +94,4 @@ let auxPlacar = 0;
 function scorePlacar() {
   auxPlacar += 3;
   scoreP.innerText = auxPlacar;
-  console.log('jooj');
 }
