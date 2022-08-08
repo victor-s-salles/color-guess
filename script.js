@@ -28,7 +28,7 @@ function respErrada() {
   localResposta.appendChild(resposta);
 }
 function dispColor() {
-  rgb = genColors();
+  const rgb = genColors();
 
   const local = document.getElementById('local');
   const color = document.createElement('p');
@@ -71,6 +71,7 @@ function answer() {
       console.log(aux2);
       if (color == aux2) {
         respCert();
+        scorePlacar();
       } else respErrada();
     });
   }
@@ -88,3 +89,12 @@ function reset() {
   });
 }
 reset();
+const scoreP = document.getElementById('score');
+scoreP.innerText = 0;
+let auxPlacar = 0;
+
+function scorePlacar() {
+  auxPlacar += 3;
+  scoreP.innerText = auxPlacar;
+  console.log('jooj');
+}
