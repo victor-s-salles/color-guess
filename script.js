@@ -67,7 +67,7 @@ function answer() {
   for (let index = 0; index < options.length; index += 1) {
     options[index].addEventListener('click', (event) => {
       const color = event.target.style.backgroundColor;
-      if (color == aux2) {
+      if (color === aux2) {
         respCert();
         scorePlacar();
       } else respErrada();
